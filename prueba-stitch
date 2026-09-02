@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inmobiliaria Raúl | Departamentos de Lujo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-tint": "#535f74",
+                      "inverse-surface": "#303030",
+                      "on-primary-fixed-variant": "#3c475b",
+                      "on-secondary-container": "#785a1a",
+                      "on-tertiary-container": "#858480",
+                      "primary-fixed": "#d7e3fc",
+                      "tertiary-fixed-dim": "#c9c6c2",
+                      "surface-container-high": "#eae8e7",
+                      "surface-bright": "#fbf9f8",
+                      "surface-container-highest": "#e4e2e2",
+                      "outline": "#75777d",
+                      "primary-fixed-dim": "#bbc7df",
+                      "inverse-primary": "#bbc7df",
+                      "on-surface-variant": "#44474c",
+                      "on-secondary-fixed": "#261900",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dbd9d9",
+                      "on-primary-fixed": "#101c2e",
+                      "primary-container": "#101c2e",
+                      "on-tertiary-fixed": "#1c1c19",
+                      "surface-container-low": "#f5f3f3",
+                      "surface": "#fbf9f8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "outline-variant": "#c5c6cd",
+                      "on-error-container": "#93000a",
+                      "tertiary": "#000000",
+                      "surface-container": "#efeded",
+                      "on-primary-container": "#79849b",
+                      "secondary-container": "#fed488",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#e5e2dd",
+                      "error": "#ba1a1a",
+                      "on-background": "#1b1c1c",
+                      "secondary": "#775a19",
+                      "secondary-fixed": "#ffdea5",
+                      "secondary-fixed-dim": "#e9c176",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#f2f0f0",
+                      "on-tertiary-fixed-variant": "#474743",
+                      "primary": "#000000",
+                      "tertiary-container": "#1c1c19",
+                      "on-surface": "#1b1c1c",
+                      "surface-variant": "#e4e2e2",
+                      "background": "#fbf9f8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-padding-desktop": "120px",
+                      "gutter": "32px",
+                      "container-max": "1280px",
+                      "section-padding-mobile": "64px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["EB Garamond", "serif"],
+                      "display-lg": ["EB Garamond", "serif"],
+                      "headline-md": ["EB Garamond", "serif"],
+                      "body-md": ["Hanken Grotesk", "sans-serif"],
+                      "body-lg": ["Hanken Grotesk", "sans-serif"],
+                      "label-sm": ["Hanken Grotesk", "sans-serif"],
+                      "subheading": ["Hanken Grotesk", "sans-serif"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                      "subheading": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Subtle reveal animation for sections */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation (From JSON Blueprint) -->
+<header class="fixed top-0 w-full z-50 bg-transparent dark:bg-transparent transition-all duration-300" id="mainNav" role="banner">
+<div class="flex justify-between items-center px-gutter py-unit w-full max-w-container-max mx-auto h-24">
+<!-- Brand Logo -->
+<a class="font-headline-md uppercase tracking-wider text-primary dark:text-on-primary transition-opacity hover:opacity-70 z-10" href="#" id="navLogo">
+                INMOBILIARIA RAÚL
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center gap-12 font-subheading tracking-[0.1em] z-10">
+<a class="text-primary dark:text-on-primary hover:text-secondary transition-colors duration-300" href="#overview">Overview</a>
+<a class="text-primary dark:text-on-primary hover:text-secondary transition-colors duration-300" href="#amenities">Amenities</a>
+<a class="text-primary dark:text-on-primary hover:text-secondary transition-colors duration-300" href="#location">Location</a>
+</nav>
+<!-- Trailing Action -->
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 border border-secondary text-secondary font-subheading tracking-[0.1em] hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded cursor-pointer z-10" href="#contact">
+                Request Info
+            </a>
+<!-- Mobile Menu Button (Hamburger) -->
+<button aria-label="Open menu" class="md:hidden text-primary p-2 z-10">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+<!-- Background overlay that transitions on scroll -->
+<div class="absolute inset-0 bg-surface/90 backdrop-blur-md opacity-0 transition-opacity duration-300 -z-10 shadow-[0px_4px_20px_rgba(15,27,45,0.02)]" id="navBg"></div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative w-full h-screen min-h-[800px] flex items-center justify-center overflow-hidden" id="overview">
+<!-- Background Image -->
+<div class="absolute inset-0 w-full h-full">
+<div class="w-full h-full bg-cover bg-center bg-no-repeat transform scale-105 transition-transform duration-[20s] ease-out hover:scale-110" data-alt="A breathtaking, hyper-realistic architectural twilight rendering of a towering modern luxury condominium building. The facade features expansive glass windows reflecting the soft, warm hues of the sunset against a deep indigo sky. The lighting highlights the building's sleek, minimalist geometric structure. The mood is exclusive, serene, and aspirational, designed to evoke architectural poise and high-end living." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuByYhjI3p92S428LrdGJD77YhWfoHMJk8J4yUIe1sqhiWn09BUgj1w3yXwcIzl_hhllmQYLm3JfAPGYMgIk9IgsH9oJEhz5XTBrOFip_o57xz2WsmNbPK343L7IdoFSKBXmqjfQSNFhDpUWWNn523xVtPSMv62AeUMMx6SupPWn_lWrPWRHNl4tUldCiYOFGfU0LT8ZycW7cYLdza6l8yhroYVtjUzw_8hA86wiyklQsFVIFcHQn3ZC0Q')"></div>
+<!-- Gradient Overlay for legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-primary-container/40 to-transparent"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 w-full max-w-container-max mx-auto px-gutter text-center flex flex-col items-center">
+<h1 class="font-display-lg text-on-primary max-w-4xl mx-auto mb-6 opacity-0 translate-y-8 animate-[slideUp_1s_ease-out_0.5s_forwards]">
+                    Vive el Horizonte de tus Sueños
+                </h1>
+<p class="font-body-lg text-primary-fixed-dim max-w-2xl mx-auto mb-12 opacity-0 translate-y-8 animate-[slideUp_1s_ease-out_0.8s_forwards]">
+                    Exclusividad y confort en el corazón de la ciudad. Un refugio de diseño vanguardista donde cada detalle arquitectónico está pensado para tu bienestar.
+                </p>
+<div class="opacity-0 translate-y-8 animate-[slideUp_1s_ease-out_1.1s_forwards]">
+<a class="inline-flex items-center justify-center px-10 py-4 bg-primary-container text-secondary-fixed font-subheading tracking-widest uppercase hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded shadow-[0_20px_40px_rgba(15,27,45,0.2)]" href="#amenities">
+                        Explorar Departamentos
+                    </a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center text-on-primary opacity-70 animate-bounce">
+<span class="font-subheading text-[10px] tracking-[0.2em] uppercase mb-2">Descubrir</span>
+<span class="material-symbols-outlined font-light">arrow_downward</span>
+</div>
+</section>
+<!-- Value Propositions -->
+<section class="py-section-padding-desktop bg-surface relative z-20">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-gutter">
+<!-- Prop 1 -->
+<div class="flex flex-col items-center text-center reveal-on-scroll">
+<div class="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-8 bg-surface-container-lowest shadow-[0_10px_30px_rgba(15,27,45,0.03)] text-secondary">
+<span class="material-symbols-outlined text-3xl">shield_person</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-4">Seguridad 24/7</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs">
+                            Sistemas de vigilancia de última generación y personal altamente capacitado para garantizar tu tranquilidad en todo momento.
+                        </p>
+</div>
+<!-- Prop 2 -->
+<div class="flex flex-col items-center text-center reveal-on-scroll" style="transition-delay: 0.1s;">
+<div class="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-8 bg-surface-container-lowest shadow-[0_10px_30px_rgba(15,27,45,0.03)] text-secondary">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-4">Ubicación Premium</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs">
+                            Situado estratégicamente en el distrito más exclusivo, con acceso inmediato a vías principales, gastronomía y cultura.
+                        </p>
+</div>
+<!-- Prop 3 -->
+<div class="flex flex-col items-center text-center reveal-on-scroll" style="transition-delay: 0.2s;">
+<div class="w-20 h-20 rounded-full border border-outline-variant flex items-center justify-center mb-8 bg-surface-container-lowest shadow-[0_10px_30px_rgba(15,27,45,0.03)] text-secondary">
+<span class="material-symbols-outlined text-3xl">architecture</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-4">Diseño Vanguardista</h3>
+<p class="font-body-md text-on-surface-variant max-w-xs">
+                            Espacios concebidos bajo una filosofía de 'poesía arquitectónica', priorizando la luz natural, la amplitud y materiales nobles.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Amenities (Bento Grid Style) -->
+<section class="py-section-padding-desktop bg-surface-container-low border-t border-outline-variant/10" id="amenities">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-20 text-center reveal-on-scroll">
+<span class="font-subheading text-secondary tracking-widest uppercase mb-4 block">Estilo de Vida</span>
+<h2 class="font-display-lg text-on-surface">Amenidades Exclusivas</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 grid-rows-[auto] gap-6 h-auto md:h-[700px]">
+<!-- Feature 1: Infinity Pool (Large Block) -->
+<div class="md:col-span-8 md:row-span-2 relative group overflow-hidden rounded reveal-on-scroll">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="A stunning, photorealistic image of a luxurious rooftop infinity pool at a high-end condominium. The pool edge blends seamlessly with a panoramic cityscape at sunset. The lighting is soft and golden, highlighting elegant lounge chairs on a pristine stone deck. The architectural style is minimalist and modern, reflecting exclusivity and tranquility." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDX34yN5Gq7H4Rg0pZOW5R9VSx36ZBIYVyahWcMjo9K3IzURkY7oBAIgJSaztRsv0haI7Jt9a45gPQS4wEA5zBBwsmUoLOyaP8jL9uo_DuhbWzlQ_N_ll1egw9JEIViWjTGeStKDm3enEtnpRnZu4CGg__QAPxCaZTh1JWvvCLpjky4Oewwn1WtNh56YHCdrQaE-TmpgRMaKonHIXosOKnLyb7j5SHaUXoLKUlOFewvQ_qaJIp9AIGiDQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-outline-variant/30 backdrop-blur-md bg-surface/10 text-on-primary mb-6">
+<span class="material-symbols-outlined text-sm">pool</span>
+<span class="font-label-sm tracking-wide uppercase">Nivel 42</span>
+</div>
+<h3 class="font-headline-md text-on-primary mb-2">Piscina Infinity</h3>
+<p class="font-body-md text-primary-fixed-dim max-w-md">Nada hacia el horizonte en nuestra piscina de borde infinito climatizada, un oasis suspendido sobre la ciudad.</p>
+</div>
+</div>
+<!-- Feature 2: Rooftop Lounge (Top Right) -->
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden rounded reveal-on-scroll" style="transition-delay: 0.1s;">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="An elegant, modern rooftop lounge area in a luxury building. Features minimalist designer furniture, warm ambient lighting, and floor-to-ceiling glass panels overlooking a sparkling night city skyline. The color palette incorporates deep charcoal, ivory, and subtle gold accents. The mood is sophisticated and intimate, perfect for evening gatherings." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZhLjPCTZgQ5dGUgGcCalPzx2B9pzF-mA2er0SfA_ji4YQ-LerqI-w8O4xU20fcUqxBPsgaO0yAHS2NmqVSYnDFR8nzCD9cKGUayQrXavXbWnJT4PfHnjbxGEZtvRDaPhLyyP_NHBQOloiynLyg0sx_lqp3584lpsTumSrMc7HO0ycVBflwtDWX5CVhdYzj9hD9sqen3rq5C7TRG57QAN-04d_OywBYFi_gGfTsNEThoefz87aNEDCZg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 w-full">
+<h3 class="font-headline-md text-on-primary text-2xl mb-1">Rooftop Lounge</h3>
+<p class="font-body-md text-primary-fixed-dim text-sm">Espacios diseñados para la contemplación y el encuentro social.</p>
+</div>
+</div>
+<!-- Feature 3: Wellness Center (Bottom Right) -->
+<div class="md:col-span-4 md:row-span-1 relative group overflow-hidden rounded bg-tertiary-container reveal-on-scroll" style="transition-delay: 0.2s;">
+<div class="absolute inset-0 p-8 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary">spa</span>
+<a class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-tertiary hover:bg-secondary hover:border-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div>
+<h3 class="font-headline-md text-on-tertiary text-2xl mb-2">Wellness Center</h3>
+<p class="font-body-md text-on-tertiary-container text-sm">Gimnasio equipado con tecnología de punta, sauna y áreas de meditación zen.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Image / Parallax Break -->
+<section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden" id="location">
+<div class="absolute inset-0 w-full h-full">
+<div class="w-full h-full bg-cover bg-center bg-fixed" data-alt="A highly detailed architectural exterior shot of the condominium building's grand entrance during daytime. The scene features lush, meticulously landscaped gardens, imposing stone facades, and an elegant porte-cochère. The lighting is bright and clear, highlighting the high-quality materials and modern minimalist design of the structure. The atmosphere is welcoming yet highly exclusive." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDf66G-0RY0h9aY5zbL5F1AQDXw4ZdPRLUNGLRR2YaOrhQ7aQuN3eVarueK54TNXC46_ra0uccOxd2XnQWUXdHFS-95RNOw-Qe95DHVMQuIcV0O6r0lqfUICg74Ad1v6alqMjKrd7EOcpIXoUdGGC7oScRrMwLkQTGmic7f4lhkOMgfNTOQybdgnD09PN0ZEpCXsAigW6R-BJhVdw-tZH9Vblj92NYr8HPAy11gOa6aLu3cHrT57lRunA')"></div>
+<div class="absolute inset-0 bg-primary/40 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center px-gutter reveal-on-scroll">
+<h2 class="font-display-lg text-on-primary mb-6">El Privilegio de la Altura</h2>
+<a class="inline-flex items-center gap-2 text-secondary font-subheading tracking-widest uppercase hover:text-on-primary transition-colors border-b border-secondary pb-1" href="#">
+                    Ver Galería Completa <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-padding-desktop bg-surface relative" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<!-- Text/Info Side -->
+<div class="reveal-on-scroll">
+<span class="font-subheading text-secondary tracking-widest uppercase mb-4 block">Atención Personalizada</span>
+<h2 class="font-display-lg text-on-surface mb-8 leading-tight">Solicita Más Información</h2>
+<p class="font-body-lg text-on-surface-variant mb-12 max-w-md">
+                            Nuestros asesores están disponibles para brindarte una presentación detallada del proyecto, planos de distribución y opciones de financiamiento.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">apartment</span>
+<div>
+<h4 class="font-subheading text-on-surface uppercase tracking-wider mb-1">Showroom</h4>
+<p class="font-body-md text-on-surface-variant">Av. de los Arquitectos 1042<br/>Distrito Financiero</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">call</span>
+<div>
+<h4 class="font-subheading text-on-surface uppercase tracking-wider mb-1">Teléfono</h4>
+<p class="font-body-md text-on-surface-variant">+52 (55) 1234-5678</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Side (Glassmorphism inspired clean card) -->
+<div class="bg-surface-container-lowest p-10 md:p-14 shadow-[0_20px_40px_rgba(15,27,45,0.05)] border border-outline-variant/10 rounded reveal-on-scroll" style="transition-delay: 0.2s;">
+<form action="#" class="space-y-8" method="POST">
+<div class="space-y-2">
+<label class="block font-label-sm text-on-surface-variant tracking-wider uppercase" for="name">Nombre Completo</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface font-body-md py-2 px-0 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline-variant/50" id="name" name="name" placeholder="Ej. Juan Pérez" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="block font-label-sm text-on-surface-variant tracking-wider uppercase" for="email">Correo Electrónico</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface font-body-md py-2 px-0 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline-variant/50" id="email" name="email" placeholder="correo@ejemplo.com" required="" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-on-surface-variant tracking-wider uppercase" for="phone">Teléfono</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface font-body-md py-2 px-0 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline-variant/50" id="phone" name="phone" placeholder="+52 000 000 0000" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-on-surface-variant tracking-wider uppercase" for="message">Mensaje (Opcional)</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 text-on-surface font-body-md py-2 px-0 focus:ring-0 focus:border-secondary transition-colors resize-none placeholder:text-outline-variant/50" id="message" name="message" placeholder="Me interesa conocer la disponibilidad de departamentos de 3 recámaras..." rows="3"></textarea>
+</div>
+<button class="w-full py-4 bg-primary-container text-secondary-fixed font-subheading tracking-widest uppercase hover:bg-secondary hover:text-on-secondary transition-all duration-300 rounded shadow-md mt-4" type="submit">
+                                Enviar Solicitud
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (From JSON Blueprint) -->
+<footer class="w-full block bg-tertiary dark:bg-surface-container border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-gutter py-section-padding-desktop max-w-container-max mx-auto">
+<!-- Brand Column -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<span class="font-headline-md text-secondary uppercase tracking-wider font-ebGaramond">
+                    INMOBILIARIA RAÚL
+                </span>
+<p class="font-body-md text-on-tertiary-fixed-variant dark:text-on-surface max-w-sm">
+                    © 2024 Inmobiliaria Raúl. All rights reserved. Architectural Poise in every detail.
+                </p>
+</div>
+<!-- Links Column -->
+<div class="md:col-span-8 flex flex-wrap gap-x-12 gap-y-6 md:justify-end items-start mt-8 md:mt-0">
+<a class="font-hankenGrotesk text-body-md text-on-tertiary-fixed-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-200" href="#">Contact</a>
+<a class="font-hankenGrotesk text-body-md text-on-tertiary-fixed-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-hankenGrotesk text-body-md text-on-tertiary-fixed-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-200" href="#">Terms of Service</a>
+<a class="font-hankenGrotesk text-body-md text-on-tertiary-fixed-variant hover:text-secondary hover:underline decoration-secondary underline-offset-4 transition-all duration-200" href="#">Press Kit</a>
+</div>
+</div>
+</footer>
+<!-- Scripts for Interactions -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Setup Keyframe Animations dynamically
+            const styleSheet = document.createElement("style");
+            styleSheet.textContent = `
+                @keyframes slideUp {
+                    from { opacity: 0; transform: translateY(30px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            `;
+            document.head.appendChild(styleSheet);
+
+            // Nav Scroll Effect
+            const nav = document.getElementById('mainNav');
+            const navBg = document.getElementById('navBg');
+            const navLogo = document.getElementById('navLogo');
+            const navLinks = nav.querySelectorAll('nav a');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navBg.classList.remove('opacity-0');
+                    navBg.classList.add('opacity-100');
+                    navLogo.classList.replace('text-on-primary', 'text-primary');
+                    navLinks.forEach(link => link.classList.replace('text-on-primary', 'text-primary'));
+                } else {
+                    navBg.classList.remove('opacity-100');
+                    navBg.classList.add('opacity-0');
+                    navLogo.classList.replace('text-primary', 'text-on-primary');
+                    navLinks.forEach(link => link.classList.replace('text-primary', 'text-on-primary'));
+                }
+            });
+
+            // Intersection Observer for Scroll Reveals
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
